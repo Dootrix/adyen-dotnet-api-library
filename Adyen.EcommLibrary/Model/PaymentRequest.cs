@@ -19,8 +19,10 @@ namespace Adyen.EcommLibrary.Model
         public BankAccount BankAccount { get; set; }
 
         [DataMember(Name = "additionalData", EmitDefaultValue = false)]
-        public Dictionary<string, string> AdditionalData { get; set; }
+        public new Dictionary<string, string> AdditionalData { get; set; }
 
+        [DataMember(Name = "metadata", EmitDefaultValue = false)]
+        public new Dictionary<string, string> Metadata { get; set; }
 
         /**
    * get additionalData map
