@@ -26,7 +26,7 @@ namespace Adyen.EcommLibrary.Test
             var paymentRequest = new PaymentRequest
             {
                 MerchantAccount = "MerchantAccount",
-                Amount = new Amount("EUR", 1500),
+                Amount = new Amount { Currency = "EUR", Value = 1500 },
                 Card = CreateTestCard(),
                 Reference = "payment - " + DateTime.Now.ToString("yyyyMMdd")
             };

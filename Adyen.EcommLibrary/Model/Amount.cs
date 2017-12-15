@@ -28,16 +28,7 @@ namespace Adyen.EcommLibrary.Model
     /// </summary>
     [DataContract]
     public partial class Amount :  IEquatable<Amount>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Amount" /> class.
-        /// </summary>
-        public Amount(string Currency = default(string), long? Value = default(long?))
-        {
-            this.Currency = Currency;
-            this.Value = Value;
-        }
-       
+    {  
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
 

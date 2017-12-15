@@ -35,7 +35,7 @@ namespace Adyen.EcommLibrary.Test
             var captureRequest = new CaptureRequest
             {
                 MerchantAccount = "MerchantAccount",
-                ModificationAmount = new Amount("EUR", 150),
+                ModificationAmount = new Amount { Currency = "EUR", Value = 150 },
                 Reference = "capture - " + DateTime.Now.ToString("yyyyMMdd"),
                 OriginalReference = pspReference
             };
@@ -59,7 +59,7 @@ namespace Adyen.EcommLibrary.Test
             var refundRequest = new RefundRequest()
             {
                 MerchantAccount = "MerchantAccount",
-                ModificationAmount = new Amount("EUR", 150),
+                ModificationAmount = new Amount { Currency = "EUR", Value = 150 },
                 Reference = "refund - " + DateTime.Now.ToString("yyyyMMdd"),
                 OriginalReference = pspReference
             };
